@@ -176,8 +176,6 @@ class coinbase(Exchange, ImplicitAPI):
                             'accounts/{account_id}/deposits/{deposit_id}': 10.6,
                             'accounts/{account_id}/withdrawals': 10.6,
                             'accounts/{account_id}/withdrawals/{withdrawal_id}': 10.6,
-                            'payment-methods': 10.6,
-                            'payment-methods/{payment_method_id}': 10.6,
                             'user': 10.6,
                             'user/auth': 10.6,
                         },
@@ -237,6 +235,8 @@ class coinbase(Exchange, ImplicitAPI):
                             'brokerage/intx/portfolio/{portfolio_uuid}': 1,
                             'brokerage/intx/positions/{portfolio_uuid}': 1,
                             'brokerage/intx/positions/{portfolio_uuid}/{symbol}': 1,
+                            'brokerage/payment_methods': 1,
+                            'brokerage/payment_methods/{payment_method_id}': 1
                         },
                         'post': {
                             'brokerage/orders': 1,
@@ -755,7 +755,7 @@ class coinbase(Exchange, ImplicitAPI):
         #         "payment_method": {
         #             "id": "a022b31d-f9c7-5043-98f2",
         #             "resource": "payment_method",
-        #             "resource_path": "/v2/payment-methods/a022b31d-f9c7-5043-98f2"
+        #             "resource_path": "/v3/payment-methods/a022b31d-f9c7-5043-98f2"
         #         },
         #         "transaction": {
         #             "id": "04ed4113-3732-5b0c-af86-b1d2146977d0",
@@ -787,7 +787,7 @@ class coinbase(Exchange, ImplicitAPI):
         #         "payment_method": {
         #             "id": "8b94cfa4-f7fd-5a12-a76a",
         #             "resource": "payment_method",
-        #             "resource_path": "/v2/payment-methods/8b94cfa4-f7fd-5a12-a76a"
+        #             "resource_path": "/v3/payment-methods/8b94cfa4-f7fd-5a12-a76a"
         #         },
         #         "transaction": {
         #             "id": "fcc2550b-5104-5f83-a444",
@@ -914,7 +914,7 @@ class coinbase(Exchange, ImplicitAPI):
         #         "payment_method": {
         #             "id": "83562370-3e5c-51db-87da-752af5ab9559",
         #             "resource": "payment_method",
-        #             "resource_path": "/v2/payment-methods/83562370-3e5c-51db-87da-752af5ab9559"
+        #             "resource_path": "/v3/payment-methods/83562370-3e5c-51db-87da-752af5ab9559"
         #         },
         #         "transaction": {
         #             "id": "441b9494-b3f0-5b98-b9b0-4d82c21c252a",
@@ -3425,7 +3425,7 @@ class coinbase(Exchange, ImplicitAPI):
         #             "payment_method": {
         #                 "id": "83562370-3e5c-51db-87da-752af5ab9559",
         #                 "resource": "payment_method",
-        #                 "resource_path": "/v2/payment-methods/83562370-3e5c-51db-87da-752af5ab9559"
+        #                 "resource_path": "/v3/payment-methods/83562370-3e5c-51db-87da-752af5ab9559"
         #             },
         #             "transaction": {
         #                 "id": "441b9494-b3f0-5b98-b9b0-4d82c21c252a",
@@ -3488,7 +3488,7 @@ class coinbase(Exchange, ImplicitAPI):
         #             "payment_method": {
         #                 "id": "83562370-3e5c-51db-87da-752af5ab9559",
         #                 "resource": "payment_method",
-        #                 "resource_path": "/v2/payment-methods/83562370-3e5c-51db-87da-752af5ab9559"
+        #                 "resource_path": "/v3/payment-methods/83562370-3e5c-51db-87da-752af5ab9559"
         #             },
         #             "transaction": {
         #                 "id": "441b9494-b3f0-5b98-b9b0-4d82c21c252a",
